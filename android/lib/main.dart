@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'profile.dart';
+import 'qr.dart';
 
 void main() {
   runApp(const PaseDeLista());
@@ -32,7 +33,7 @@ class PaseDeLista extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ProfilePage(title: 'Efrén Campuzano'),
+      home: const QRPage(title: 'QR Code'),
     );
   }
 }
