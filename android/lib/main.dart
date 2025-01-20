@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'profile.dart';
-import 'qr.dart';
+import 'home.dart';
 
 void main() {
   runApp(const PaseDeLista());
@@ -8,6 +7,8 @@ void main() {
 
 class PaseDeLista extends StatelessWidget {
   const PaseDeLista({super.key});
+
+
 
   // This widget is the root of your application.
   @override
@@ -20,7 +21,7 @@ class PaseDeLista extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
         useMaterial3: true,
       ),
-      home: const ProfilePage(title: 'Pase de lista'),
+      home: const HomePage(),
     );
   }
 }

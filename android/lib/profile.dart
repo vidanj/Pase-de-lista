@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pase_de_lista/qr.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key, required this.title});
@@ -20,6 +21,12 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
 
+  final List  <Widget> pages = [
+    const ProfilePage(title: 'Pase de Lista'),
+    const QRPage(title: 'Codigo QR')
+  ];
+
+  int currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -90,12 +97,26 @@ class _ProfilePageState extends State<ProfilePage> {
             ],
       ),
       
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
-          BottomNavigationBarItem(icon: Icon(Icons.qr_code), label: 'QR')
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   currentIndex: currentPage,
+      //   onTap: (value) {
+      //     setState(() {
+      //       currentPage = value;
+      //     });
+      //   },
+      //   items: const [
+      //     //Navegacion por elevated button 
+      //     BottomNavigationBarItem(icon: Icon(Icons.person) , label: 'Perfil'),
+      //     BottomNavigationBarItem(icon: Icon(Icons.qr_code) , label: 'Perfil'),
+
+      //     // BottomNavigationBarItem(icon: ElevatedButton(
+      //     //   onPressed:(){
+      //     //     Navigator.push(context, 
+      //     //     MaterialPageRoute(builder: (context) => const QRPage(title: 'Código QR')));
+      //     //   }, child: Icon(Icons.qr_code)
+      //     //   ), label: 'QR')
+      //   ],
+      // ),
     );
   }
 }

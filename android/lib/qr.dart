@@ -75,12 +75,12 @@ class _QRPageState extends State<QRPage> {
             ],
       ),
       
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
-          BottomNavigationBarItem(icon: Icon(Icons.qr_code), label: 'QR')
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   items: [
+      //     BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
+      //     BottomNavigationBarItem(icon: Icon(Icons.qr_code), label: 'QR')
+      //   ],
+      // ),
     );
   }
 }
