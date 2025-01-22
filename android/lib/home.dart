@@ -2,19 +2,27 @@ import 'package:flutter/material.dart';
 import 'qr.dart'; import 'profile.dart';
 
 class HomePage extends StatefulWidget{
-  const HomePage({super.key});
+  const HomePage({super.key, required this.title});
+
+  final String title;
 
   @override
   State<HomePage> createState() =>  _HomePage();
 }
 
 class _HomePage extends State<HomePage> {
-  final List  <Widget> pages = [
-    const ProfilePage(title: 'Pase de Lista'),
-    const QRPage(title: 'Codigo QR')
+  final List<Widget> _pages = [
+    const ProfilePage(),
+    const QRPage()
   ];
 
-  int currentPage = 0;
+  int _currentPage = 0;
+
+  void _pageSelected(int pageIndex){
+    setState(() {
+       _currentPage = pageIndex;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +34,17 @@ class _HomePage extends State<HomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
 
-      body: pages[currentPage],
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
+      ),
+
+      body: _pages[_currentPage],
       
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentPage,
-        onTap: (value) {
-          setState(() {
-            currentPage = value;
-          });
+        currentIndex: _currentPage,
+        onTap: (index) {
+          _pageSelected(index);
         },
         items: const [
          

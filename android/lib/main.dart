@@ -21,7 +21,7 @@ class PaseDeLista extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const HomePage(title: "Pase de Lista",),
     );
   }
 }

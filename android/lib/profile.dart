@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pase_de_lista/qr.dart';
 
-class ProfilePage extends StatefulWidget {
-  const ProfilePage({super.key, required this.title});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -13,20 +12,20 @@ class ProfilePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  final String title;
+  //final String title;
 
-  @override
-  State<ProfilePage> createState() => _ProfilePageState();
-}
+//   @override
+//   State<ProfilePage> createState() => _ProfilePageState();
+// }
 
-class _ProfilePageState extends State<ProfilePage> {
+// class _ProfilePageState extends State<ProfilePage> {
 
-  final List  <Widget> pages = [
-    const ProfilePage(title: 'Pase de Lista'),
-    const QRPage(title: 'Codigo QR')
-  ];
+  // final List  <Widget> pages = [
+  //   const ProfilePage(),
+  //   const QRPage()
+  // ];
 
-  int currentPage = 0;
+  // int currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +36,12 @@ class _ProfilePageState extends State<ProfilePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
+      // appBar: AppBar(
 
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
-        title: Text(widget.title),
-      ),
+      //   //title: Text(widget.title),
+      // ),
       body: Column(          
           children: <Widget>[
               
